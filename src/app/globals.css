@@ -1,0 +1,208 @@
+@import "tailwindcss";
+@import "tw-animate-css";
+@import "shadcn/tailwind.css";
+
+@custom-variant dark (&:is(.dark *));
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: var(--font-manrope);
+  --font-display: var(--font-syne);
+  --font-mono: var(--font-geist-mono);
+  --font-heading: var(--font-syne);
+  --color-sidebar-ring: var(--sidebar-ring);
+  --color-sidebar-border: var(--sidebar-border);
+  --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
+  --color-sidebar-accent: var(--sidebar-accent);
+  --color-sidebar-primary-foreground: var(--sidebar-primary-foreground);
+  --color-sidebar-primary: var(--sidebar-primary);
+  --color-sidebar-foreground: var(--sidebar-foreground);
+  --color-sidebar: var(--sidebar);
+  --color-chart-5: var(--chart-5);
+  --color-chart-4: var(--chart-4);
+  --color-chart-3: var(--chart-3);
+  --color-chart-2: var(--chart-2);
+  --color-chart-1: var(--chart-1);
+  --color-ring: var(--ring);
+  --color-input: var(--input);
+  --color-border: var(--border);
+  --color-destructive: var(--destructive);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-accent: var(--accent);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-muted: var(--muted);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-secondary: var(--secondary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-primary: var(--primary);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-popover: var(--popover);
+  --color-card-foreground: var(--card-foreground);
+  --color-card: var(--card);
+  --color-espresso: var(--espresso);
+  --color-forest: var(--forest);
+  --color-forest-mid: var(--forest-mid);
+  --color-siren: var(--siren);
+  --color-siren-bright: var(--siren-bright);
+  --color-mist: var(--mist);
+  --color-foam: var(--foam);
+  --color-latte: var(--latte);
+  --radius-sm: calc(var(--radius) * 0.6);
+  --radius-md: calc(var(--radius) * 0.8);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) * 1.4);
+  --radius-2xl: calc(var(--radius) * 1.8);
+  --radius-3xl: calc(var(--radius) * 2.2);
+  --radius-4xl: calc(var(--radius) * 2.6);
+  --animate-shiny-text: shiny-text 8s infinite;
+  --animate-marquee: marquee var(--duration) infinite linear;
+  --animate-marquee-vertical: marquee-vertical var(--duration) linear infinite;
+  @keyframes shiny-text {
+    0%,
+    90%,
+    100% {
+      background-position: calc(-100% - var(--shiny-width)) 0;
+    }
+    30%,
+    60% {
+      background-position: calc(100% + var(--shiny-width)) 0;
+    }
+  }
+  @keyframes marquee {
+    from {
+      transform: translateX(0);
+    }
+    to {
+      transform: translateX(calc(-100% - var(--gap)));
+    }
+  }
+  @keyframes marquee-vertical {
+    from {
+      transform: translateY(0);
+    }
+    to {
+      transform: translateY(calc(-100% - var(--gap)));
+    }
+  }
+  --animate-shine: shine var(--duration) infinite linear
+;
+  @keyframes shine {
+  0% {
+    background-position: 0% 0%;}
+  50% {
+    background-position: 100% 100%;}
+  to {
+    background-position: 0% 0%;}}}
+
+:root {
+  /* Forest-night Starbucks analytics palette */
+  --espresso: #070d0a;
+  --forest: #13241e;
+  --forest-mid: #1e3d32;
+  --siren: #00754a;
+  --siren-bright: #1aa86a;
+  --mist: #8fb9a5;
+  --foam: #e6efe9;
+  --latte: #d4b896;
+
+  --background: var(--espresso);
+  --foreground: var(--foam);
+  --card: var(--forest);
+  --card-foreground: var(--foam);
+  --popover: var(--forest);
+  --popover-foreground: var(--foam);
+  --primary: var(--siren);
+  --primary-foreground: #f4fff8;
+  --secondary: var(--forest-mid);
+  --secondary-foreground: var(--foam);
+  --muted: #163028;
+  --muted-foreground: #a3bdb0;
+  --accent: var(--forest-mid);
+  --accent-foreground: var(--foam);
+  --destructive: oklch(0.65 0.2 25);
+  --border: rgb(143 185 165 / 18%);
+  --input: rgb(143 185 165 / 22%);
+  --ring: var(--siren-bright);
+  --chart-1: var(--siren-bright);
+  --chart-2: var(--mist);
+  --chart-3: var(--latte);
+  --chart-4: var(--foam);
+  --chart-5: var(--forest-mid);
+  --radius: 0.75rem;
+  --sidebar: var(--forest);
+  --sidebar-foreground: var(--foam);
+  --sidebar-primary: var(--siren);
+  --sidebar-primary-foreground: #f4fff8;
+  --sidebar-accent: var(--forest-mid);
+  --sidebar-accent-foreground: var(--foam);
+  --sidebar-border: rgb(143 185 165 / 18%);
+  --sidebar-ring: var(--siren-bright);
+}
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+  }
+
+  html {
+    @apply scroll-smooth;
+  }
+
+  body {
+    @apply bg-background text-foreground font-sans antialiased;
+    background-image:
+      radial-gradient(ellipse 80% 50% at 10% -10%, rgb(0 117 74 / 28%), transparent),
+      radial-gradient(ellipse 60% 40% at 90% 10%, rgb(30 61 50 / 55%), transparent);
+    background-attachment: fixed;
+  }
+
+  ::selection {
+    background: rgb(26 168 106 / 35%);
+    color: var(--foam);
+  }
+}
+
+@layer utilities {
+  .font-display {
+    font-family: var(--font-syne), ui-sans-serif, system-ui, sans-serif;
+  }
+
+  .text-balance {
+    text-wrap: balance;
+  }
+
+  .grain {
+    position: relative;
+  }
+
+  .grain::after {
+    content: "";
+    pointer-events: none;
+    position: absolute;
+    inset: 0;
+    opacity: 0.045;
+    mix-blend-mode: overlay;
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+  }
+
+  .section-pad {
+    @apply px-5 sm:px-8 lg:px-12 xl:px-16;
+  }
+
+  .eyebrow {
+    @apply font-display text-[0.7rem] uppercase tracking-[0.28em] text-mist;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  .animate-marquee,
+  .animate-marquee-vertical,
+  .animate-shiny-text {
+    animation: none !important;
+  }
+}

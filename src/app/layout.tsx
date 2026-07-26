@@ -1,0 +1,46 @@
+import type { Metadata } from "next"
+import { Geist_Mono, Manrope, Syne } from "next/font/google"
+import "./globals.css"
+
+const syne = Syne({
+  variable: "--font-syne",
+  subsets: ["latin"],
+  weight: ["500", "600", "700", "800"],
+})
+
+const manrope = Manrope({
+  variable: "--font-manrope",
+  subsets: ["latin"],
+  weight: ["400", "500", "600", "700"],
+})
+
+const geistMono = Geist_Mono({
+  variable: "--font-geist-mono",
+  subsets: ["latin"],
+})
+
+export const metadata: Metadata = {
+  title: "Starbucks Sales Analysis · Business Analytics Case Study",
+  description:
+    "A premium business analytics case study exploring daypart revenue, loyalty behavior, and product-mix decisions across Starbucks stores.",
+  openGraph: {
+    title: "Starbucks Sales Analysis",
+    description:
+      "Uncovering what quietly reshapes Starbucks revenue — dayparts, loyalty, and product mix.",
+  },
+}
+
+export default function RootLayout({
+  children,
+}: Readonly<{
+  children: React.ReactNode
+}>) {
+  return (
+    <html
+      lang="en"
+      className={`${syne.variable} ${manrope.variable} ${geistMono.variable} h-full dark`}
+    >
+      <body className="min-h-full flex flex-col">{children}</body>
+    </html>
+  )
+}
