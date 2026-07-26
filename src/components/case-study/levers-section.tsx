@@ -3,18 +3,19 @@
 import { useMemo, useState } from "react"
 import { BlurFade } from "@/components/ui/blur-fade"
 import { MagicCard } from "@/components/ui/magic-card"
-import { NumberTicker } from "@/components/ui/number-ticker"
 import { levers } from "@/lib/case-data"
 import { cn } from "@/lib/utils"
 
 export function LeversSection() {
-  const [active, setActive] = useState<string[]>(["labor", "margin"])
+  const [active, setActive] = useState<string[]>([
+    "afternoon",
+    "refreshers",
+    "food",
+    "loyalty",
+  ])
 
-  const combinedLift = useMemo(
-    () =>
-      levers
-        .filter((lever) => active.includes(lever.id))
-        .reduce((sum, lever) => sum + lever.lift, 0),
+  const selected = useMemo(
+    () => levers.filter((lever) => active.includes(lever.id)),
     [active]
   )
 
@@ -28,37 +29,31 @@ export function LeversSection() {
     <section id="levers" className="section-pad relative py-24 sm:py-32">
       <div className="mx-auto max-w-6xl">
         <BlurFade inView>
-          <p className="eyebrow">Interactive levers</p>
+          <p className="eyebrow">Strategic levers</p>
           <h2 className="mt-4 max-w-3xl font-display text-3xl font-bold text-foam sm:text-4xl lg:text-5xl text-balance">
-            Toggle the plays. Watch the modeled lift move.
+            Toggle the plays management is already signaling
           </h2>
           <p className="mt-4 max-w-2xl text-foam/65">
-            Built for class critique — click each lever on or off to see how the
-            recommendation stack compounds. Not a forecast engine; a decision
-            conversation starter.
+            These are not invented POS lifts — they are decision levers grounded
+            in disclosed KPIs and the afternoon / Rewards strategy. Toggle them
+            to structure a class critique.
           </p>
         </BlurFade>
 
         <div className="mt-10 flex flex-wrap items-end justify-between gap-6 rounded-2xl border border-white/8 bg-forest/50 px-6 py-5">
           <div>
             <p className="text-xs uppercase tracking-[0.22em] text-mist">
-              Combined modeled impact
+              Priorities selected
             </p>
             <p className="mt-2 font-display text-5xl font-bold tracking-tight text-siren-bright">
-              +
-              <NumberTicker
-                key={combinedLift}
-                value={Number(combinedLift.toFixed(1))}
-                decimalPlaces={1}
-                className="text-siren-bright dark:text-siren-bright"
-              />
-              %
+              {selected.length}
+              <span className="text-2xl text-foam/50"> / {levers.length}</span>
             </p>
           </div>
           <p className="max-w-sm text-sm text-foam/60">
-            {active.length === 0
-              ? "No levers selected — baseline holds."
-              : `${active.length} lever${active.length === 1 ? "" : "s"} active across the pilot cluster.`}
+            {selected.length === 0
+              ? "No levers selected — open the board for discussion."
+              : selected.map((item) => item.title).join(" · ")}
           </p>
         </div>
 
@@ -95,7 +90,11 @@ export function LeversSection() {
                           {lever.summary}
                         </p>
                         <p className="mt-4 text-sm text-mist">
-                          +{lever.lift} {lever.unit}
+                          Anchor KPI: {lever.lift}
+                          {lever.unit.startsWith("%") || lever.unit.startsWith("B")
+                            ? ""
+                            : " "}
+                          {lever.unit}
                         </p>
                       </div>
                       <span

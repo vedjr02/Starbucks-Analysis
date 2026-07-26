@@ -20,7 +20,7 @@ export function SiteNav() {
           </span>
         </a>
 
-        <nav className="hidden items-center gap-8 md:flex" aria-label="Primary">
+        <nav className="hidden items-center gap-5 lg:gap-7 xl:gap-8 md:flex" aria-label="Primary">
           {navLinks.map((link) => (
             <a
               key={link.href}

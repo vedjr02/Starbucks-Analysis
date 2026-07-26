@@ -22,8 +22,8 @@ export function ClosingCta() {
           </h2>
           <p className="mx-auto mt-6 max-w-2xl text-base leading-relaxed text-foam/65 sm:text-lg">
             Clear question. Rigorous method. Visual proof. Actions with owners.
-            Present it live — toggle the levers, walk the clusters, defend the
-            holdout.
+            Present it live — toggle the levers, walk the segments, defend the
+            sources.
           </p>
           <div className="mt-10 flex flex-wrap items-center justify-center gap-4">
             <a

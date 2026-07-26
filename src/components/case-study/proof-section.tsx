@@ -3,36 +3,16 @@
 import { BlurFade } from "@/components/ui/blur-fade"
 import { ShineBorder } from "@/components/ui/shine-border"
 import { NumberTicker } from "@/components/ui/number-ticker"
-
-const proofs = [
-  {
-    label: "Holdout accuracy",
-    value: 91,
-    suffix: "%",
-    detail: "Directionally correct on unseen weeks",
-  },
-  {
-    label: "Stores validated",
-    value: 12,
-    suffix: "",
-    detail: "Pilot cluster across two regions",
-  },
-  {
-    label: "Weeks modeled",
-    value: 78,
-    suffix: "",
-    detail: "Seasonality-aware baseline window",
-  },
-]
+import { proofs } from "@/lib/case-data"
 
 export function ProofSection() {
   return (
     <section className="section-pad py-20 sm:py-28">
       <div className="mx-auto max-w-6xl">
         <BlurFade inView>
-          <p className="eyebrow">Validation</p>
+          <p className="eyebrow">Grounded in filings</p>
           <h2 className="mt-4 max-w-2xl font-display text-3xl font-bold text-foam sm:text-4xl text-balance">
-            Recommendations survived a holdout test
+            Every headline number is traceable to a disclosure
           </h2>
         </BlurFade>
 

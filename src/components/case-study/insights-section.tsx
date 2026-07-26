@@ -49,7 +49,7 @@ export function InsightsSection() {
             <BlurFade delay={0.1} inView>
               <figure className="space-y-4">
                 <figcaption className="text-sm text-mist">
-                  Indexed beverage revenue & food attach by hour
+                  Illustrative daypart demand shape (indexed)
                 </figcaption>
                 <div className="h-72 w-full">
                   <ResponsiveContainer width="100%" height="100%">
@@ -94,7 +94,8 @@ export function InsightsSection() {
                   </ResponsiveContainer>
                 </div>
                 <p className="text-xs text-mist/60">
-                  Source: modeled store sample · indexed to peak hour = 100
+                  Illustrative curve aligned with disclosed afternoon momentum
+                  (strongest growth 3–5 PM) · not proprietary POS
                 </p>
               </figure>
             </BlurFade>
@@ -105,7 +106,7 @@ export function InsightsSection() {
             <BlurFade inView className="order-2 lg:order-1">
               <figure className="space-y-4">
                 <figcaption className="text-sm text-mist">
-                  Category share of beverage revenue
+                  FY2025 company-operated retail sales mix
                 </figcaption>
                 <div className="flex h-72 items-center gap-6">
                   <ResponsiveContainer width="55%" height="100%">
@@ -154,7 +155,7 @@ export function InsightsSection() {
             <BlurFade delay={0.1} inView>
               <figure className="space-y-4">
                 <figcaption className="text-sm text-mist">
-                  Modeled revenue lift after recommended actions
+                  FY2025 net revenue by segment ($B)
                 </figcaption>
                 <div className="h-72 w-full">
                   <ResponsiveContainer width="100%" height="100%">
@@ -167,7 +168,6 @@ export function InsightsSection() {
                         tickLine={false}
                       />
                       <YAxis
-                        domain={[90, 120]}
                         tick={{ fill: "#8fb9a5", fontSize: 11 }}
                         axisLine={false}
                         tickLine={false}
@@ -175,13 +175,7 @@ export function InsightsSection() {
                       <Tooltip contentStyle={tooltipStyle} />
                       <Bar
                         dataKey="baseline"
-                        name="Baseline"
-                        fill="#1e3d32"
-                        radius={[6, 6, 0, 0]}
-                      />
-                      <Bar
-                        dataKey="optimized"
-                        name="Optimized"
+                        name="Net revenue ($B)"
                         fill="#1aa86a"
                         radius={[6, 6, 0, 0]}
                       />
@@ -189,7 +183,7 @@ export function InsightsSection() {
                   </ResponsiveContainer>
                 </div>
                 <p className="text-xs text-mist/60">
-                  Indexed to baseline = 100 · holdout-validated store clusters
+                  Source: Starbucks FY2025 segment disclosures · $ billions
                 </p>
               </figure>
             </BlurFade>
