@@ -1,5 +1,6 @@
 import type { Metadata } from "next"
 import { Geist_Mono, Manrope, Syne } from "next/font/google"
+import { Providers } from "@/components/providers"
 import "./globals.css"
 
 const syne = Syne({
@@ -40,7 +41,9 @@ export default function RootLayout({
       lang="en"
       className={`${syne.variable} ${manrope.variable} ${geistMono.variable} h-full dark`}
     >
-      <body className="min-h-full flex flex-col">{children}</body>
+      <body className="min-h-full flex flex-col">
+        <Providers>{children}</Providers>
+      </body>
     </html>
   )
 }

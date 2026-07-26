@@ -11,7 +11,66 @@ export const navLinks = [
   { href: "#brief", label: "Brief" },
   { href: "#method", label: "Method" },
   { href: "#insights", label: "Insights" },
+  { href: "#levers", label: "Levers" },
   { href: "#actions", label: "Actions" },
+]
+
+export const levers = [
+  {
+    id: "labor",
+    title: "Afternoon labor shift",
+    summary: "Move 1–2 barista hours into the 2–4 PM window.",
+    lift: 3.1,
+    unit: "% revenue",
+  },
+  {
+    id: "margin",
+    title: "Seasonal margin guardrails",
+    summary: "Cap deep discounts on low-margin cold drinks.",
+    lift: 2.4,
+    unit: "% margin pts",
+  },
+  {
+    id: "loyalty",
+    title: "Non-member challenge",
+    summary: "Two-visit loyalty challenge for promo cohorts.",
+    lift: 1.8,
+    unit: "% conversion",
+  },
+  {
+    id: "assortment",
+    title: "Localized top-12",
+    summary: "Let clusters swap 2–3 tail SKUs by affinity.",
+    lift: 1.1,
+    unit: "% waste down",
+  },
+]
+
+export const storeClusters = [
+  {
+    name: "Urban commute",
+    stores: 14,
+    signal: "Morning volume high, weak afternoon attach",
+    play: "Protect AM staffing; add PM food prompts",
+  },
+  {
+    name: "Suburban family",
+    stores: 11,
+    signal: "Weekend cold-drink spikes, promo sensitive",
+    play: "Bundle food with seasonal, not markdown-only",
+  },
+  {
+    name: "Campus / evening",
+    stores: 9,
+    signal: "Late daypart loyalty mix, custom espresso",
+    play: "Extend barista skill coverage after 3 PM",
+  },
+  {
+    name: "Travel corridor",
+    stores: 14,
+    signal: "High churn guests, thin basket depth",
+    play: "Express menu + attach offers at pickup",
+  },
 ]
 
 export const tools = [

@@ -1,7 +1,9 @@
 import { BriefSection } from "@/components/case-study/brief-section"
 import { ClosingCta } from "@/components/case-study/closing-cta"
+import { ClustersSection } from "@/components/case-study/clusters-section"
 import { Hero } from "@/components/case-study/hero"
 import { InsightsSection } from "@/components/case-study/insights-section"
+import { LeversSection } from "@/components/case-study/levers-section"
 import { MetricsSection } from "@/components/case-study/metrics-section"
 import { MethodologySection } from "@/components/case-study/methodology-section"
 import { NarrativeReveal } from "@/components/case-study/narrative-reveal"
@@ -25,6 +27,8 @@ export default function Home() {
         <MetricsSection />
         <InsightsSection />
         <ProofSection />
+        <LeversSection />
+        <ClustersSection />
         <RecommendationsSection />
         <ClosingCta />
       </main>
