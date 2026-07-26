@@ -12,6 +12,7 @@ export const navLinks = [
   { href: "#method", label: "Method" },
   { href: "#insights", label: "Insights" },
   { href: "#levers", label: "Levers" },
+  { href: "#defense", label: "Defense" },
   { href: "#actions", label: "Actions" },
 ]
 
@@ -225,4 +226,23 @@ export const deliverables = [
   "Python notebook + reproducible pipeline",
   "Store playbook (1-pager)",
   "Sensitivity analysis appendix",
+]
+
+export const defenseQuestions = [
+  {
+    q: "Why afternoon labor instead of more morning staff?",
+    a: "Morning already clears the queue in most sample stores. The binding constraint was afternoon attach — understaffing cut food prompts exactly when willingness-to-add peaked.",
+  },
+  {
+    q: "How did you separate seasonality from structural change?",
+    a: "YoY week alignment plus a holdout window. Weather and holiday spikes were tagged; recommendations only shipped if they held after those tags were removed.",
+  },
+  {
+    q: "Is 8.4% lift additive across levers?",
+    a: "No — the interactive model sums directional effects for conversation. In the write-up I report each lever independently and a conservative joint scenario with interaction discounts.",
+  },
+  {
+    q: "What would falsify your loyalty finding?",
+    a: "If member AOV advantage disappeared after controlling for visit frequency and store trade area income. It didn’t — mix composition still diverged.",
+  },
 ]

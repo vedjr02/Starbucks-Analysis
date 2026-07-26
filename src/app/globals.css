@@ -158,6 +158,7 @@
   }
 
   html {
+    color-scheme: dark;
     @apply scroll-smooth;
   }
 

@@ -39,6 +39,7 @@ export default function RootLayout({
   return (
     <html
       lang="en"
+      suppressHydrationWarning
       className={`${syne.variable} ${manrope.variable} ${geistMono.variable} h-full dark`}
     >
       <body className="min-h-full flex flex-col">
