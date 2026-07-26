@@ -1,6 +1,7 @@
 import { BriefSection } from "@/components/case-study/brief-section"
 import { ClosingCta } from "@/components/case-study/closing-cta"
 import { ClustersSection } from "@/components/case-study/clusters-section"
+import { DefenseSection } from "@/components/case-study/defense-section"
 import { Hero } from "@/components/case-study/hero"
 import { InsightFeedSection } from "@/components/case-study/insight-feed-section"
 import { InsightsSection } from "@/components/case-study/insights-section"
@@ -34,6 +35,7 @@ export default function Home() {
         <LeversSection />
         <ClustersSection />
         <RecommendationsSection />
+        <DefenseSection />
         <ClosingCta />
       </main>
       <footer className="section-pad border-t border-white/5 py-8 text-center text-xs text-mist/50">
