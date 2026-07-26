@@ -10,7 +10,7 @@ export function RecommendationsSection() {
         <BlurFade inView>
           <p className="eyebrow">Actions</p>
           <h2 className="mt-4 max-w-3xl font-display text-3xl font-bold text-foam sm:text-4xl lg:text-5xl text-balance">
-            Recommendations a district manager can pilot next week
+            Recommendations a district manager can argue from the filings
           </h2>
         </BlurFade>
 

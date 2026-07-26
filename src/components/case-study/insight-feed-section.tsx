@@ -6,33 +6,33 @@ import { cn } from "@/lib/utils"
 
 const feed = [
   {
-    title: "Afternoon attach spike",
-    body: "Food attach +6.2 pts between 2–4 PM vs morning baseline",
+    title: "Afternoon traffic accelerating",
+    body: "Company: visits after 2 PM rising; strongest growth between 3–5 PM",
     tag: "Daypart",
     color: "bg-siren",
   },
   {
-    title: "Loyalty mix shift",
-    body: "Members over-index on customized espresso; non-members on promo cold",
-    tag: "Cohort",
+    title: "Rewards dominate U.S. tender",
+    body: "34.2M 90-day actives · 58% of company-operated tender dollars",
+    tag: "Loyalty",
     color: "bg-latte",
   },
   {
-    title: "SKU concentration risk",
-    body: "Top 12 SKUs = 61% sales — assortment tail is mostly noise",
-    tag: "Pareto",
+    title: "Beverage-heavy mix",
+    body: "FY2025 company-operated mix: 73% beverages · 23% food · 4% other",
+    tag: "Mix",
     color: "bg-mist",
   },
   {
-    title: "Promo margin trap",
-    body: "Deep Frappuccino discounts lift volume, compress contribution",
-    tag: "Margin",
+    title: "Refreshers as #2 platform",
+    body: "Cold Refreshers franchise ~$2B — second only to espresso",
+    tag: "Product",
     color: "bg-siren-bright",
   },
   {
-    title: "Holdout confirmed",
-    body: "Directionally correct on 91% of unseen pilot weeks",
-    tag: "Validation",
+    title: "Mobile is structural",
+    body: "31% of U.S. company-operated transactions via mobile order",
+    tag: "Digital",
     color: "bg-forest-mid",
   },
 ]
@@ -44,11 +44,11 @@ export function InsightFeedSection() {
         <BlurFade inView>
           <p className="eyebrow">Signal feed</p>
           <h2 className="mt-4 font-display text-3xl font-bold text-foam sm:text-4xl text-balance">
-            What kept lighting up during exploration
+            What kept lighting up in the disclosures
           </h2>
           <p className="mt-4 max-w-md text-foam/65">
-            A living reel of the signals that survived cleaning — useful when a
-            professor asks “what did you actually notice in the data?”
+            A reel of the public signals that shaped the brief — useful when a
+            professor asks “what did the filings actually say?”
           </p>
         </BlurFade>
 

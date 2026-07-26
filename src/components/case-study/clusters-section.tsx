@@ -41,11 +41,12 @@ export function ClustersSection() {
         <BlurFade inView>
           <p className="eyebrow">Store clusters</p>
           <h2 className="mt-4 max-w-3xl font-display text-3xl font-bold text-foam sm:text-4xl text-balance">
-            One playbook never fits forty-eight stores
+            One playbook never fits 41,000+ coffeehouses
           </h2>
           <p className="mt-4 max-w-2xl text-foam/65">
-            Clustering revealed four operating personalities. Recommendations
-            were localized to each — so the class can see strategy, not averages.
+            Q2 FY2026 store counts by operating model. Recommendations change
+            when you move from U.S. company-operated denseness to licensed
+            international breadth.
           </p>
         </BlurFade>
 
@@ -59,7 +60,9 @@ export function ClustersSection() {
                 <h3 className="font-display text-xl font-bold text-foam">
                   {cluster.name}
                 </h3>
-                <p className="mt-1 text-sm text-mist">{cluster.stores} stores</p>
+                <p className="mt-1 text-sm text-mist">
+                  {cluster.stores.toLocaleString()} stores
+                </p>
               </div>
               <p className="text-sm leading-relaxed text-foam/70 md:pt-1">
                 {cluster.signal}

@@ -15,6 +15,7 @@ import { RecommendationsSection } from "@/components/case-study/recommendations-
 import { ScrollProgress } from "@/components/case-study/scroll-progress"
 import { SiteNav } from "@/components/case-study/site-nav"
 import { ToolsMarquee } from "@/components/case-study/tools-marquee"
+import { sources } from "@/lib/case-data"
 
 export default function Home() {
   return (
@@ -38,9 +39,33 @@ export default function Home() {
         <DefenseSection />
         <ClosingCta />
       </main>
-      <footer className="section-pad border-t border-white/5 py-8 text-center text-xs text-mist/50">
-        Independent academic case study for coursework. Not affiliated with or
-        endorsed by Starbucks Corporation.
+      <footer className="section-pad border-t border-white/5 py-10">
+        <div className="mx-auto max-w-6xl space-y-6">
+          <p className="text-xs uppercase tracking-[0.22em] text-mist/70">
+            Sources
+          </p>
+          <ul className="grid gap-4 sm:grid-cols-2">
+            {sources.map((source) => (
+              <li key={source.label} className="text-sm">
+                <a
+                  href={source.href}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="font-medium text-foam/90 underline-offset-4 hover:text-siren-bright hover:underline"
+                >
+                  {source.label}
+                </a>
+                <p className="mt-1 text-mist/70">{source.detail}</p>
+              </li>
+            ))}
+          </ul>
+          <p className="pt-4 text-center text-xs text-mist/50">
+            Independent academic case study using publicly available investor
+            materials. Not affiliated with or endorsed by Starbucks Corporation.
+            Illustrative charts visualize disclosed patterns and are not
+            proprietary POS extracts.
+          </p>
+        </div>
       </footer>
     </>
   )

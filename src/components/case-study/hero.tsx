@@ -72,9 +72,9 @@ export function Hero() {
         </BlurFade>
 
         <p className="mt-6 max-w-xl text-base leading-relaxed text-foam/70 sm:text-lg">
-          A business analytics case study on daypart revenue, loyalty behavior,
-          and product-mix decisions — built to turn transaction noise into
-          decisions a store manager can act on.
+          A business analytics case study built from Starbucks public filings —
+          daypart strategy, Rewards economics, and product mix — so every claim
+          can be traced to a disclosure.
         </p>
 
         <div className="mt-10 flex flex-wrap items-center gap-4">

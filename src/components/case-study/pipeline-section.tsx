@@ -21,19 +21,19 @@ export function PipelineSection() {
           <ul className="mt-8 space-y-3 text-sm text-foam/75">
             <li className="flex gap-3">
               <span className="text-siren-bright">01</span>
-              Ingest POS + loyalty + product hierarchy
+              Ingest 10-K, earnings, loyalty IR dashboards
             </li>
             <li className="flex gap-3">
               <span className="text-siren-bright">02</span>
-              Clean voids, normalize dayparts, build dims
+              Normalize KPIs into a comparable metric sheet
             </li>
             <li className="flex gap-3">
               <span className="text-siren-bright">03</span>
-              Explore with cohort / Pareto / time series
+              Explore segments, mix, Rewards, and daypart narrative
             </li>
             <li className="flex gap-3">
               <span className="text-siren-bright">04</span>
-              Validate on holdout, ship store plays
+              Recommend actions tied to named sources
             </li>
           </ul>
         </BlurFade>

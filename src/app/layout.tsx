@@ -23,7 +23,7 @@ const geistMono = Geist_Mono({
 export const metadata: Metadata = {
   title: "Starbucks Sales Analysis · Business Analytics Case Study",
   description:
-    "A premium business analytics case study exploring daypart revenue, loyalty behavior, and product-mix decisions across Starbucks stores.",
+    "A business analytics case study of Starbucks using FY2025–Q2 FY2026 public filings: daypart strategy, Rewards economics, and product mix.",
   openGraph: {
     title: "Starbucks Sales Analysis",
     description:
